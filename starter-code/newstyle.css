@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: poppins, sans-serif;
+    background-color: #f0f0f0;
+    margin: auto;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: auto;
+    flex-direction: column;
+    
+}
+
+/*-----------header_container-----------*/
+
+.header_container{
+    width: 100%;
+    height: 20%;
+    color: #fff;
+    position: relative;
+}
+
+.header-background{
+    background-color: #24053E;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header-background svg{
+    display: block;
+}
+
+.header_logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.header_logo figure{
+   width: 20%;
+   height: auto;
+   object-fit: cover;
+   overflow: hidden;
+}
+
+.header_logo img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.header_logo a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header_logo a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #44FFA1;
+}
+
+.header_logo a:hover,
+a:focus,
+a:active{
+    color: #44FFA1;
+    transition: color 0.3s ease-in-out;
+}
+
+.bg-pattern{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.bg-pattern img{
+    max-width: 30%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+.bg-pattern-1{
+    position: absolute;
+    left: -30px;
+    top: 100px;
+}
+
+
+.bg-pattern-2{
+    position: absolute;
+    top: 80px;
+    left: ;
+}
+
+.header_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;  
+    font-size: clamp(1.5rem, calc(2vw + 0.5rem), 3rem);
+    text-align: center;
+    line-height: 4rem;
+}
+
+.header_text h1 span{
+    position: relative;
+}
+
+.header_text h1 span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #44FFA1;
+}
+
+.button{
+    text-decoration: none;
+    background: #44FFA1;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: #000;
+    margin: 1.25rem auto 4rem auto;
+    outline: none;
+    border: none;
+    width: 200px; /* fixed width */
+    height: auto;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+}
+
+.button:hover, 
+.button:active,
+.button:focus{
+    background: transparent;
+    color: #44FFA1;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid  #44FFA1;
+}
+
+
+.phone-image{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.phone-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+
+
+/*****------------Services Section-----------*****/
+
+.Services{
+    width: 70%;
+    height: auto;
+    margin: 8rem auto 5rem;
+}
+
+.services_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.numbers{
+    border: 1px solid #24053E;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+
+
+/*****------------founder----------*****/
+
+.founder{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.founder-image-container{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0 auto 2rem;
+}
+
+
+.founder-image-container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.founder-description{
+    margin: 0 auto;
+    max-width: 411px;
+    max-height: 600px;
+    height: auto;
+    background-color: #24053E;
+    color: #fff;
+    line-height: 2rem;
+    padding: 1.5rem;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    width: 70%;
+}
+
+footer{
+        position: absolute;
+        top: 2150px;
+        }
+
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0 20px 0;
+
+}
+
+/*****------------Media query-----------*****/
+
+@media only screen and (max-width: 768px){
+
+    .Services{
+        margin: 14rem auto 4rem auto;
+        }
+
+
+    .services_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: start;
+        align-self: center ;
+    }
+
+    .phone-image{
+        width: 50%;
+        height:auto;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .phone-image img{
+        position: absolute;
+        left: auto;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        }
+
+        .founder-description{
+            position: absolute;
+            top: 70%;
+            left: 45%;
+            width: 70%;
+        }
+
+        footer{
+        position: absolute;
+        top: 2150px;
+        }
+    }
+
+
+
+  @media screen and (max-width: 375px) {
+     .header_container{
+            width: 100%;
+        }
+        .bg-pattern img{
+        display: none;
+    }
+
+    .button{
+        padding: 0.05rem 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+   
+
+    .phone-image img{
+        left: 3%;
+        top: 75%;
+        width: 100%;
+        height: auto;
+    }
+
+   .Services{
+        margin: 7rem auto 2rem auto;
+    }
+
+   .services_container{
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .founder-image-container{
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+        overflow: hidden;
+        margin: 0 auto 2rem;
+    }
+
+    .founder-description{
+        position: absolute;
+        top: 70%;
+        width: 80%;
+    }
+
+    footer{
+        position: absolute;
+        top: 2200px;
+        }
+}
